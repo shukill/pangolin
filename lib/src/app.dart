@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'constants.dart';
 import 'screens/signInPage.dart';
@@ -9,10 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: kBackgroundColor,
         primaryColor: kPrimaryColor,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        scaffoldBackgroundColor: kBackgroundColor,
+        textTheme: GoogleFonts.merriweatherTextTheme(Theme.of(context).textTheme),
       ),
       title: 'Pangolin',
       home: SignInPage(),
